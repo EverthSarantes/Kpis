@@ -1,0 +1,14 @@
+Rotacion total
+Disponibilidad --  Daniel
+
+Tasa de fallas
+Tiempo Medio entre Fallas  -- Everth Leonardo
+
+Tiempo Medio de Deteccion
+Tiempo Medio para Remediar una Bulnerabilidad
+Densidad de Efectos -- Axel Bismarck
+
+Tiempo Medio de Resolucion
+Satisfaccion de clientes
+Cobertura de codigo -- Wilber Eliuth
+
