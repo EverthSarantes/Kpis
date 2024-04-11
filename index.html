@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/kpis.js"></script>
     <title>Kpis</title>
+    <link rel="stylesheet" href="css\estilos.css">
 </head>
 <body>
-    <header></header>
+    <header><h1>Automatizacion de KPIs</h1></header>
     <!-- Daniel :D -->
     <section>
         <h3>Rotacion total</h3>
@@ -25,10 +26,15 @@
                 <input type="number" id="lce" name="lineas_codigo_eliminada">
             </div>
             <div>
-                <button>Calcular</button>
+                <label for="time">Tiempo(horas):</label><br>
+                <input type="number" id="time" name="Tiempo">
+            </div>
+            <div>
+                <button id="calcularRotacionBtn">Calcular</button>
             </div>
             <div>       
-                <input readonly id="resultado-rotacion">
+                <label for="resultado1">Resultado:</label>
+                <input readonly id="resultado1">
             </div>
         </div>
     </section>
@@ -44,9 +50,10 @@
                 <input type="number" id="ti" name="tiempo_de_inactividad">  
             </div>
             <div>
-                <button>Calcular</button>
+                <button id="CalcularDispBtn">Calcular</button>
             </div>
-            <div>       
+            <div>
+                <label for="resultado-disponibilidad">Resultado:</label>
                 <input readonly id="resultado-disponibilidad">
             </div>
         </div>
@@ -55,21 +62,22 @@
     <!-- Axel -->
     <section>
         <h3>Densidad de efecto</h3>
-        <div id ="Densidad">"
-           <label for="text"> numero 1</label> <br>
-           <input type="number" id="text" name="numero 1">
-           </div>
+        <div id ="Densidad">
+            <div>
+                <label for="text"> numero 1</label> <br>
+                <input type="number" id="text" name="numero 1">
+            </div>
            
-              <div>
-            <label for="text"> numero 2</label> <br>
-            <input type="number" id="text" name="numero 2">
-           </div>
+            <div>
+                <label for="text"> numero 2</label> <br>
+                <input type="number" id="text" name="numero 2">
+            </div>
            
            <div>
-            <label for="text"> Resultado</label> <br>
-            <input type="number" id="text" name="numero 3">
-            
-           </section>div>
+                <label for="text"> Resultado</label> <br>
+                <input type="number" id="text" name="numero 3">
+           </div>
+           </section>
         </div>
     </section>
     <section>
