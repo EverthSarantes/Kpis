@@ -19,7 +19,7 @@ function calcRotacionTotal(){
 
     if (!isNaN(codigoAd) && !isNaN(codigoMod) && !isNaN(codigoEl) && !isNaN(tiempo)){
         var rotacion = (codigoAd + codigoMod + codigoEl) / tiempo;
-        document.getElementById("resultado1").innerText = rotacion.toFixed(2);
+        document.getElementById("resultado1").value = rotacion.toFixed(2);
     }else {
         document.getElementById("resultado1").innerText = "Por favor, ingrese números válidos.";
     }
@@ -32,7 +32,7 @@ function calcDisponibilidad(){
     if (!isNaN(tiempoActividad) && !isNaN(tiempoInactividad)){
         var disponibilidad = (tiempoActividad/(tiempoActividad+tiempoInactividad))*100;
 
-        document.getElementById("resultado-disponibilidad").innerText = disponibilidad.toFixed(2);
+        document.getElementById("resultado-disponibilidad").value = disponibilidad.toFixed(2);
     }else {
         document.getElementById("resultado-disponibilidad").innerText = "Por favor, ingrese números válidos.";
     }
