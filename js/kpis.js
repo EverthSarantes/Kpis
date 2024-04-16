@@ -38,7 +38,18 @@ function calcDisponibilidad(){
     }
 }
 
+function calcTiempoMedioResolucion(){
+
+    //tiempo medio de resolucion
+    var td = parseFloat(document.getElementById("td").value);
+    var nr = parseFloat(document.getElementById("nr").value);
+
+    var mttr = td/nr;
+    document.getElementById("resultmttr").value = mttr.toFixed(2);
+
+}
+
 //Funcionamiento de los botones
 document.getElementById("calcularRotacionBtn").addEventListener("click", calcRotacionTotal);
 document.getElementById("CalcularDispBtn").addEventListener("click", calcDisponibilidad);
-
+document.getElementById("btncalc_MTTR").addEventListener("click", calcTiempoMedioResolucion);
