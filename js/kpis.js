@@ -41,3 +41,4 @@ function calcDisponibilidad(){
 //Funcionamiento de los botones
 document.getElementById("calcularRotacionBtn").addEventListener("click", calcRotacionTotal);
 document.getElementById("CalcularDispBtn").addEventListener("click", calcDisponibilidad);
+
