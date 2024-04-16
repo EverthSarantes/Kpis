@@ -88,18 +88,43 @@
     <section>
         <h3>Tiempo Medio de resolución</h3>
         <div id="kpi1">
-            <label for="Td">Td</label>
-            <input type="number" id = "Td" >
-
-            <label for="Nr">Nr</label>
-            <input type="number" id = "Nr" >
-
+            <div>
+                <label for="td">Td</label>
+                <input type="number" id = "td" >
+            </div>
             
+            <div>
+                <label for="nr">Nr</label>
+                <input type="number" id = "nr" >
+            </div>
+            <div>
+                <button id="btncalc_MTTR">Calcular</button>
+            </div>
+            <div>
+                <label for="resultmttr">Resultado:</label>
+                <input type="number" id="resultmttr" readonly>
+            </div>
         </div>
     </section>
     <section>
         <h3>Satisfaccion de Clientes</h3>
         <div>
+            <div>
+                <label for="cs">Cs</label>
+                <input type="number" id = "cs" >
+            </div>
+            
+            <div>
+                <label for="nrst">Nr</label>
+                <input type="number" id = "nrst" >
+            </div>
+            <div>
+                <button id="btncalc_CSAT">Calcular</button>
+            </div>
+            <div>
+                <label for="resultcsat">Resultado:</label>
+                <input type="number" id="resultcsat" readonly>
+            </div>
             
         </div>
     </section>
