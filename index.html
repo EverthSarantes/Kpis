@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kpis</title>
     <link rel="stylesheet" href="css\estilos.css">
+    <link rel="stylesheet" href="">
     
 </head>
 <body>
@@ -150,7 +151,7 @@
                 </div>
                 <div>
                     <label for="resultcsat">Resultado:</label>
-                    <input type="number" id="resultcsat" readonly>
+                    <input type="text" id="resultcsat" readonly>
                 </div>
                 
             </div>
@@ -162,7 +163,21 @@
     <div class="panel">
         <section>
             <div>
-                <p>wd</p>
+                <div>
+                    <label for="lp">Lp</label><br>
+                    <input type="number" id="lp" name="lineas_codigo_probadas">
+                </div>
+                <div>
+                    <label for="lt">Lt</label><br>
+                    <input type="number" id="lt" name="lineas_totales">
+                </div>
+                <div>
+                    <button id="calcularCoberturaBtn">Calcular</button>
+                </div>
+                <div>
+                    <label for="resultcobertura">Resultado:</label>
+                    <input type="text" id="resultcobertura" readonly>
+                </div>
             </div>
         </section>
     

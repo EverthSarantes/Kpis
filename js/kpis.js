@@ -49,7 +49,26 @@ function calcTiempoMedioResolucion(){
 
 }
 
+function calcSatifaccion(){
+    //satisfaccionde cliente
+    var cs = parseFloat(document.getElementById("cs").value);
+    var nrst = parseFloat(document.getElementById("nrst").value);
+
+    var CSAT = cs/nrst;
+
+    document.getElementById("resultcsat").value = CSAT.toFixed(2);
+}
+function calcCovertura(){
+    var lp = parseFloat(document.getElementById("lp").value);
+    var lt = parseFloat(document.getElementById("lt").value);
+
+    var cobertura = lp/lt;
+    document.getElementById("resultcobertura").value = cobertura.toFixed(2);
+}
+
 //Funcionamiento de los botones
 document.getElementById("calcularRotacionBtn").addEventListener("click", calcRotacionTotal);
 document.getElementById("CalcularDispBtn").addEventListener("click", calcDisponibilidad);
 document.getElementById("btncalc_MTTR").addEventListener("click", calcTiempoMedioResolucion);
+document.getElementById("btncalc_CSAT").addEventListener("click", calcSatifaccion);
+document.getElementById("calcularCoberturaBtn").addEventListener("click", calcCovertura);
