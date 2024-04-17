@@ -1,6 +1,6 @@
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: rgb(255, 255, 255);
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -12,7 +12,7 @@
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: #ccc
 }
 
 .accordion:after {
@@ -29,7 +29,7 @@
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: rgb(174, 211, 227,0.9);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -68,4 +68,43 @@
 
 .imput-style{
     width: 20%;
+}
+.estilo-cajas{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.cajas{
+  padding: 7px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.cajas-Res{
+  padding: 7px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 45px;
+}
+.inputStyle{
+    width: 20%;
+}
+.button-style{
+  border: 2px solid #000000;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.styletitle{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+}
+.fondo{
+  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/581/154/desktop-wallpaper-backgrounds-for-login-page-login-page.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

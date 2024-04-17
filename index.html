@@ -8,36 +8,35 @@
     <link rel="stylesheet" href="">
     
 </head>
-<body>
-    <header><h1>Automatizacion de KPIs</h1></header>
-    <h2>s</h2>
+<body class="fondo">
+    <header><h1 class="styletitle">Automatizacion de KPIs</h1></header>
     <!-- Daniel :D -->
     <button class="accordion label-bold">Rotacion total</button>
     <div class="panel">
         <section>
-            <div id="kpi1">
+            <div id="kpi1" class="estilo-cajas" class="inputStyle">
                 <div>
                     <label for="lca">Lineas de codigo agregadas:</label><br>
-                    <input type="number" id="lca" name="lineas_codigo_agregada">
+                    <input class="cajas" type="number" id="lca" name="lineas_codigo_agregada">
                 </div>
                 <div>
                     <label for="lcm">Lineas de codigo modificadas:</label><br>
-                    <input type="number" id="lcm" name="lineas_codigo_modificada">  
+                    <input class="cajas" type="number" id="lcm" name="lineas_codigo_modificada">  
                 </div>
                 <div>
-                    <label for="lce">Lineas de codigo agregadas:</label><br>
-                    <input type="number" id="lce" name="lineas_codigo_eliminada">
+                    <label for="lce">Lineas de codigo eliminadas:</label><br>
+                    <input class="cajas" type="number" id="lce" name="lineas_codigo_eliminada">
                 </div>
                 <div>
                     <label for="time">Tiempo(horas):</label><br>
-                    <input type="number" id="time" name="Tiempo">
+                    <input class="cajas" type="number" id="time" name="Tiempo">
                 </div>
                 <div>
-                    <button id="calcularRotacionBtn">Calcular</button>
+                    <button class="button-style" id="calcularRotacionBtn">Calcular</button>
                 </div>
                 <div>       
                     <label for="resultado1">Resultado:</label>
-                    <input readonly id="resultado1">
+                    <input class="cajas-Res" readonly id="resultado1">
                 </div>
             </div>
         </section>
@@ -46,47 +45,44 @@
     <button class="accordion label-bold">Disponibilidad</button>
     <div class="panel">
         <section>
-            <div id="kpi2">
+            <div id="kpi2" class="estilo-cajas" class="inputStyle">
                 <div>
                     <label for="ta">Tiempo de actividad(horas)</label><br>
-                    <input type="number" id="ta" name="tiempo_de_actividad">
+                    <input class="cajas" type="number" id="ta" name="tiempo_de_actividad">
                 </div>
                 <div>
                     <label for="ti">Tiempo de inactividad(horas)</label><br>
-                    <input type="number" id="ti" name="tiempo_de_inactividad">  
+                    <input class="cajas" type="number" id="ti" name="tiempo_de_inactividad">  
                 </div>
                 <div>
-                    <button id="CalcularDispBtn">Calcular</button>
+                    <button class="button-style" id="CalcularDispBtn">Calcular</button>
                 </div>
                 <div>
                     <label for="resultado-disponibilidad">Resultado:</label>
-                    <input readonly id="resultado-disponibilidad">
+                    <input class="cajas-Res" readonly id="resultado-disponibilidad">
                 </div>
             </div>
         </section>
     
     </div>
 
-    
-    
-
     <button class="accordion label-bold">Densidad de efecto</button>
     <div class="panel">
         <section>
-            <div id ="Densidad">
+            <div id ="Densidad" class="estilo-cajas" class="inputStyle">
                 <div>
-                    <label for="text"> numero 1</label> <br>
-                    <input type="number" id="text" name="numero 1">
+                    <label for="Nd">Numero de defectos</label> <br>
+                    <input class="cajas" type="number" id="Nd">
                 </div>
                
                 <div>
-                    <label for="text"> numero 2</label> <br>
-                    <input type="number" id="text" name="numero 2">
+                    <label for="Nc">Numero total de lineas de codigo</label> <br>
+                    <input class="cajas" type="number" id="Nc">
                 </div>
-               
+               <button class="button-style" id="btnDensidad">Calcular</button>
                <div>
-                    <label for="text"> Resultado</label> <br>
-                    <input type="number" id="text" name="numero 3">
+                    <label for="ResDen"> Resultado</label>
+                    <input class="cajas-Res" type="number" id="ResDen" >
                </div>
                </section>
             </div>
@@ -96,11 +92,24 @@
 
     <!-- Axel -->
     
-    <button class="accordion label-bold">Tiempo Medio de Deteccion</button>
+    <button class="accordion label-bold">Tiempo Medio de Deteccion de errores</button>
     <div class="panel">
         <section>
-            <div>
-                <h1>a</h1>
+            <div class="estilo-cajas" class="inputStyle">
+                <div>
+                    <label for="Td">Tiempo total en detectar todos los errores</label> <br>
+                    <input class="cajas" type="number" id="Td">
+                </div>
+               
+                <div>
+                    <label for="Ne">Numero de errores</label> <br>
+                    <input class="cajas" type="number" id="Ne">
+                </div>
+               <button class="button-style" id="btnMTTD">Calcular</button>
+               <div>
+                    <label for="ResMTTD"> Resultado</label>
+                    <input class="cajas-Res" type="number" id="ResMTTD" >
+               </div>
             </div>
         </section>
     </div>
@@ -111,22 +120,22 @@
     <button class="accordion label-bold">Tiempo Medio de Resolución</button>
     <div class="panel">
         <section>
-            <div id="kpi1">
+            <div id="kpi1" class="estilo-cajas" class="inputStyle">
                 <div>
-                    <label for="td">Td</label>
-                    <input type="number" id = "td" >
+                    <label for="td">Tiempo de descubrimento hasta resoluciòn (minutos)</label><br>
+                    <input class="cajas" type="number" id = "td" >
                 </div>
                 
                 <div>
-                    <label for="nr">Nr</label>
-                    <input type="number" id = "nr" >
+                    <label for="nr">Numero de reparaciones</label><br>
+                    <input class="cajas" type="number" id = "nr" >
                 </div>
                 <div>
-                    <button id="btncalc_MTTR">Calcular</button>
+                    <button class="button-style" id="btncalc_MTTR">Calcular</button>
                 </div>
                 <div>
                     <label for="resultmttr">Resultado:</label>
-                    <input type="number" id="resultmttr" readonly>
+                    <input class="cajas-Res" type="number" id="resultmttr" readonly>
                 </div>
             </div>
         </section>
@@ -136,22 +145,22 @@
     <button class="accordion label-bold">Satisfaccion de Clientes</button>
     <div class="panel">
         <section>
-            <div>
+            <div class="estilo-cajas" class="inputStyle">
                 <div>
-                    <label for="cs">Cs</label>
-                    <input type="number" id = "cs" >
+                    <label for="cs">Numero de clientes satisfechos</label><br>
+                    <input class="cajas" type="number" id = "cs" >
                 </div>
                 
                 <div>
-                    <label for="nrst">Nr</label>
-                    <input type="number" id = "nrst" >
+                    <label for="nrst">Numero de respuestas a la cuesta</label><br>
+                    <input class="cajas" type="number" id = "nrst" >
                 </div>
                 <div>
-                    <button id="btncalc_CSAT">Calcular</button>
+                    <button class="button-style" id="btncalc_CSAT">Calcular</button>
                 </div>
                 <div>
                     <label for="resultcsat">Resultado:</label>
-                    <input type="text" id="resultcsat" readonly>
+                    <input class="cajas-Res" type="text" id="resultcsat" readonly>
                 </div>
                 
             </div>
@@ -162,21 +171,21 @@
     <button class="accordion label-bold">Cobertura de código</button>
     <div class="panel">
         <section>
-            <div>
+            <div class="estilo-cajas" class="inputStyle">
                 <div>
-                    <label for="lp">Lp</label><br>
-                    <input type="number" id="lp" name="lineas_codigo_probadas">
+                    <label for="lp">Lineas de còdigo probadas</label><br>
+                    <input class="cajas" type="number" id="lp" name="lineas_codigo_probadas">
                 </div>
                 <div>
-                    <label for="lt">Lt</label><br>
-                    <input type="number" id="lt" name="lineas_totales">
+                    <label for="lt">Lineas totales de còdigo</label><br>
+                    <input class="cajas" type="number" id="lt" name="lineas_totales">
                 </div>
                 <div>
-                    <button id="calcularCoberturaBtn">Calcular</button>
+                    <button class="button-style" id="calcularCoberturaBtn">Calcular</button>
                 </div>
                 <div>
                     <label for="resultcobertura">Resultado:</label>
-                    <input type="text" id="resultcobertura" readonly>
+                    <input class="cajas-Res" type="text" id="resultcobertura" readonly>
                 </div>
             </div>
         </section>
@@ -188,21 +197,21 @@
     <button class="accordion label-bold">Tasa de Fallas</button>
     <div class="panel">
         <section>
-            <div>
+            <div class="estilo-cajas" class="inputStyle">
                 <div>
                     <label for="tiempo_fallas">Tiempo de fallas:</label><br>
-                    <input type="number" id="tiempo_fallas" name="tiempo_fallas">
+                    <input class="cajas" type="number" id="tiempo_fallas" name="tiempo_fallas">
                 </div>
                 <div>
                     <label for="tiempo_actividad">Tiempo de actividad:</label><br>
-                    <input type="number" id="tiempo_actividad" name="tiempo_actividad">
+                    <input class="cajas" type="number" id="tiempo_actividad" name="tiempo_actividad">
                 </div>
                 <div>
-                    <button id="calcular_tasa_fallas">Calcular</button>
+                    <button class="button-style" id="calcular_tasa_fallas">Calcular</button>
                 </div>
                 <div>
                     <label for="resultado_tasa_fallas">Resultado</label>
-                    <input type="text" id="resultado_tasa_fallas" readonly>
+                    <input class="cajas-Res" type="text" id="resultado_tasa_fallas" readonly>
                 </div>
             </div>
         </section>
@@ -212,21 +221,21 @@
     <button class="accordion label-bold">Tiempo medio entre fallas</button>
     <div class="panel">
         <section>
-            <div>
+            <div class="estilo-cajas" class="inputStyle">
                 <div>
                     <label for="total_fallas_2">Total de fallas:</label><br>
-                    <input type="number" id="total_fallas_2" name="total_fallas_2">
+                    <input class="cajas" type="number" id="total_fallas_2" name="total_fallas_2">
                 </div>
                 <div>
                     <label for="tiempo_actividad_2">Tiempo de actividad:</label><br>
-                    <input type="number" id="tiempo_actividad_2" name="tiempo_actividad_2">
+                    <input class="cajas" type="number" id="tiempo_actividad_2" name="tiempo_actividad_2">
                 </div>
                 <div>
-                    <button id="calcular_tiempo_fallas">Calcular</button>
+                    <button class="button-style" id="calcular_tiempo_fallas">Calcular</button>
                 </div>
                 <div>
                     <label for="resultado_tiempo_fallas">Resultado</label>
-                    <input type="text" id="resultado_tiempo_fallas" readonly>
+                    <input class="cajas-Res" type="text" id="resultado_tiempo_fallas" readonly>
                 </div>
             </div>
         </section>
