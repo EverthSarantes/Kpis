@@ -185,7 +185,7 @@
                 </div>
                 <div>
                     <label for="resultcobertura">Resultado:</label>
-                    <input type="text" id="resultcobertura" readonly>
+                    <input class="cajas-Res" type="text" id="resultcobertura" readonly>
                 </div>
             </div>
         </section>
@@ -199,29 +199,43 @@
         <section>
             <div class="estilo-cajas" class="inputStyle">
                 <div>
-                    <label for="tf">Tiempo de fallas:</label><br>
-                    <input class="cajas" type="number" id="tf" name="tiempo_fallas">
+                    <label for="tiempo_fallas">Tiempo de fallas:</label><br>
+                    <input class="cajas" type="number" id="tiempo_fallas" name="tiempo_fallas">
                 </div>
                 <div>
-                    <label for="ta">Tiempo de actividad:</label><br>
-                    <input class="cajas" type="number" id="ta" name="tiempo_actividad">
+                    <label for="tiempo_actividad">Tiempo de actividad:</label><br>
+                    <input class="cajas" type="number" id="tiempo_actividad" name="tiempo_actividad">
+                </div>
+                <div>
+                    <button class="button-style" id="calcular_tasa_fallas">Calcular</button>
+                </div>
+                <div>
+                    <label for="resultado_tasa_fallas">Resultado</label>
+                    <input class="cajas-Res" type="text" id="resultado_tasa_fallas" readonly>
                 </div>
             </div>
         </section>
-    
+        
     </div>
 
-    <button class="accordion label-bold">Tiempo edio entre fallas</button>
+    <button class="accordion label-bold">Tiempo medio entre fallas</button>
     <div class="panel">
         <section>
             <div class="estilo-cajas" class="inputStyle">
                 <div>
-                    <label for="tf">Tiempo de fallas:</label><br>
-                    <input class="cajas" type="number" id="tf" name="tiempo_fallas">
+                    <label for="total_fallas_2">Total de fallas:</label><br>
+                    <input class="cajas" type="number" id="total_fallas_2" name="total_fallas_2">
                 </div>
                 <div>
-                    <label for="ta">Tiempo de actividad:</label><br>
-                    <input class="cajas" type="number" id="ta" name="tiempo_actividad">
+                    <label for="tiempo_actividad_2">Tiempo de actividad:</label><br>
+                    <input class="cajas" type="number" id="tiempo_actividad_2" name="tiempo_actividad_2">
+                </div>
+                <div>
+                    <button class="button-style" id="calcular_tiempo_fallas">Calcular</button>
+                </div>
+                <div>
+                    <label for="resultado_tiempo_fallas">Resultado</label>
+                    <input class="cajas-Res" type="text" id="resultado_tiempo_fallas" readonly>
                 </div>
             </div>
         </section>

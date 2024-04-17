@@ -1,13 +1,26 @@
 //funciones Everth
 
-function calcularTasaFallas(numero_fallas, tiempo_operacion){
+function calcularTasaFallas(primer_campo_id, segundo_campo_id, resultado_id){
     // Tasa de fallas = (Número total de fallas / Tiempo total de operación en dias) * 100
-    return (numero_fallas / tiempo_operacion) * 100;
-}
+    let numero_fallas = parseFloat(document.getElementById(primer_campo_id).value);
+    let tiempo_operacion = parseFloat(document.getElementById(segundo_campo_id).value);
 
-function calcularTiempoMedioFallas(){
-    
+    document.getElementById(resultado_id).value = (numero_fallas / tiempo_operacion) * 100;
 }
+document.getElementById("calcular_tasa_fallas").addEventListener("click", function(){
+    calcularTasaFallas("tiempo_fallas", "tiempo_actividad", "resultado_tasa_fallas");
+});
+
+function calcularTiempoMedioFallas(primer_campo_id, segundo_campo_id, resultado_id){
+    // Tiempo medio entre fallas = Tiempo total de operación en dias / Número total de fallas
+    let tiempo_operacion = parseFloat(document.getElementById(primer_campo_id).value);
+    let numero_fallas = parseFloat(document.getElementById(segundo_campo_id).value);
+
+    document.getElementById(resultado_id).value = tiempo_operacion / numero_fallas;
+}
+document.getElementById("calcular_tiempo_fallas").addEventListener("click", function(){
+    calcularTiempoMedioFallas("tiempo_actividad_2", "total_fallas_2", "resultado_tiempo_fallas");
+});
 
 //Funciones Daniel
 function calcRotacionTotal(){
