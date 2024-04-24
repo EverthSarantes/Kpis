@@ -79,9 +79,37 @@ function calcCovertura(){
     document.getElementById("resultcobertura").value = cobertura.toFixed(2);
 }
 
+function Densidad(){
+    //Disponibilidad = (Tiempo de actividad/(tiempo de actividad + tiempo de inactividad))*100
+    var NumeroDefectos = parseFloat(document.getElementById("Nd").value);
+    var totalLineas = parseFloat(document.getElementById("Nc").value);
+
+    if (!isNaN(NumeroDefectos) && !isNaN(totalLineas)){
+        var Den = NumeroDefectos/(totalLineas/1000);
+
+        document.getElementById("ResDen").value = Den.toFixed(2);
+    }else {
+        document.getElementById("ResDen").innerText = "Por favor, ingrese números válidos.";
+    }
+}
+function TiempoMedioDeteccion(){
+    var TiempoDeteccion = parseFloat(document.getElementById("Td").value);
+    var totalErrores = parseFloat(document.getElementById("Ne").value);
+
+    if (!isNaN(TiempoDeteccion) && !isNaN(totalErrores)){
+        var MTTDResultado = TiempoDeteccion/totalErrores;
+
+        document.getElementById("ResMTTD").value = MTTDResultado.toFixed(2);
+    }else {
+        document.getElementById("ResMTTD").innerText = "Por favor, ingrese números válidos.";
+    }
+}
+
 //Funcionamiento de los botones
 document.getElementById("calcularRotacionBtn").addEventListener("click", calcRotacionTotal);
 document.getElementById("CalcularDispBtn").addEventListener("click", calcDisponibilidad);
 document.getElementById("btncalc_MTTR").addEventListener("click", calcTiempoMedioResolucion);
 document.getElementById("btncalc_CSAT").addEventListener("click", calcSatifaccion);
 document.getElementById("calcularCoberturaBtn").addEventListener("click", calcCovertura);
+document.getElementById("btnDensidad").addEventListener("click", Densidad);
+document.getElementById("btnMTTD").addEventListener("click", TiempoMedioDeteccion);
